@@ -88,7 +88,7 @@ const NutritionSection = () => {
           <div className='md:max-w-xs max-w-md'>
             <p className='text-lg md:text-right text-balance font-paragraph'>
               Milk contain a wide array of nutrients, including various vitamins,
-              minerals, and protein, and it's lactose free, making it suitable for everyone.
+              minerals, and protein, and it&apos;s lactose free, making it suitable for everyone.
             </p>
           </div>
         </div>
