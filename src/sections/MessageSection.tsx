@@ -82,7 +82,7 @@ const MessageSection = () => {
             <div className='max-w-md px-10 flex-center overflow-hidden'>
               <p className=''>
                 Rev or new rebel spirit and feed the adventure of life with
-                SPLYT, where you're one chug away from epic nostalgia and
+                SPLYT, where you&apos;re one chug away from epic nostalgia and
                 fearless fun.
               </p>
             </div>
