@@ -6,14 +6,14 @@ import gsap from 'gsap'
 import { useMediaQuery } from 'react-responsive'
 
 const FlavourSlider = () => {
-  const sliderRef = useRef(null)
+  const sliderRef = useRef<HTMLDivElement | null>(null)
 
   const isTablet = useMediaQuery({
     query: '(max-width: 1024px)',
   })
 
   useGSAP(() => {
-    const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth
+    const scrollAmount = sliderRef.current!.scrollWidth - window.innerWidth
 
     if (!isTablet) {
       const tl = gsap.timeline({
