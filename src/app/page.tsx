@@ -10,6 +10,7 @@ import NutritionSection from '@/sections/NutritionSection';
 import BenefitSection from '@/sections/BenefitSection';
 import TestimonialSection from '@/sections/TestimonialSection';
 import FooterSection from '@/sections/FooterSection';
+import { useMediaQuery } from 'react-responsive';
 
 gsap.registerPlugin(ScrollSmoother);
 
@@ -24,6 +25,10 @@ export default function Page() {
     });
   }, []);
 
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <main>
       <NavBar />
@@ -34,7 +39,7 @@ export default function Page() {
           <FlavourSection />
           <NutritionSection />
           <BenefitSection />
-          <TestimonialSection />
+          {!isMobile ? <TestimonialSection /> : null}
           <FooterSection />
         </div>
       </div>

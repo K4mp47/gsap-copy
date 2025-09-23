@@ -7,14 +7,14 @@ const FooterSection = () => {
 
   return (
     <section className="footer-section">
-      <img
+      {!isMobile ? <img
         src="/images/footer-dip.png"
         alt=""
         className="w-full object-cover -translate-y-1"
-      />
-
+      /> : <div className="w-8 h-8"></div>
+      }
       <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]">
-        <div className="overflow-hidden z-10">
+        <div className="overflow-hidden z-4 relative">
           <h1 className="general-title text-center text-milk py-5">
             #CHUGRESPONSIBLY
           </h1>
@@ -23,7 +23,7 @@ const FooterSection = () => {
         {isMobile ? (
           <img
             src="/images/footer-drink.png"
-            className="absolute top-0 object-contain"
+            className="absolute top-0 object-contain z-[0]"
           />
         ) : (
           <video
@@ -47,7 +47,7 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
+        <div className="relative mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium z-4">
           <div className="flex items-center md:gap-16 gap-5">
             <div>
               <p>SPYLT Flavors</p>
